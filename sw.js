@@ -1,7 +1,7 @@
 /* Rental service worker: keeps the app's own files for fast start and "Add to Home Screen".
  * Never caches the API or photos (those need the sign-in token and must be fresh). */
 // The build replaces BUILD_ID, so each published version gets a fresh cache and old files are dropped.
-const CACHE = 'rental-shell-20261001T061802819Z';
+const CACHE = 'rental-shell-20261004T125911326Z';
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(['./', './index.html', './manifest.webmanifest', './icon-192.png'])).then(() => self.skipWaiting()));
